@@ -1,0 +1,23 @@
+
+<div class="col-md-3" style="margin-left: 50px" [ngStyle]="{'background-color':getColor()}">
+
+
+
+  <div class="card" style=" width: 18rem;">
+    <img src="{{livre.imageFile}}" class="card-img-top" style="height: 200px; width: 300px" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> {{livre.nom}} </h5>
+      <p class="card-text"> {{livre.prix}} </p>
+      <p class="card-text"> {{livre.quantity}} </p>
+      <a  [routerLink]="['detail',livre.id]">detail</a>
+      <button style="margin-left: 20px" class="btn btn-success" (click)="sendNotif()" >
+        {{livre.like}} -- like<3
+      </button>
+      <br>
+
+
+
+
+    </div>
+  </div>
+</div>
